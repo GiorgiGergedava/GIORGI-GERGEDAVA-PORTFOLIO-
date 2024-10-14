@@ -1,27 +1,18 @@
 
 // import
 
+
 import { typed } from './js/typing.js';
 
-import { form} from './js/formm.js';
+import { form } from './js/formm.js';
 
-
-// import end
-
-// npm
-axios.get('http://localhost:3000/posts')
-    .then(function (response) {
-        // handle success
-        console.log(response.data);
-    })
-    .catch(function (error) {
-        // handle error
-        console.log(error);
-    })
-    .finally(function () {
-        // always executed
-    });
+import { hamb,
+    popup,
+    body } from './js/burger.js';
     
+    // import end
+
+
 // server
 function getUsers() {
     fetch(
@@ -70,32 +61,6 @@ function getUsers() {
 getUsers();
 
 
-
-// carusel
-$('.carousel').owlCarousel({
-    margin: 20,
-    loop: true,
-    autoplay: true,
-    autoplayTimeOut: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false
-      },
-      600: {
-        items: 2,
-        nav: false
-      },
-      1000: {
-        items: 3,
-        nav: false
-      }
-    }
-  });
-
-
-
 // scroll bar
 let preogressbar = document.getElementById("preogressbar")
 let percent = document.getElementById("percent")
@@ -133,6 +98,43 @@ const setCookie = function (name, value, expiryDays, domain, path, secure) {
 };
 
 
+// carousel
+
+$('.carousel').owlcarousel({
+    margin: 20,
+    loop: true,
+    autoplay: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false
+        },
+        600: {
+            items: 2,
+            nav: false
+        },
+        1000: {
+            items: 3,
+            nav: false
+        }
+    }
+});
+
+// npm
+axios.get('http://localhost:3000/posts')
+    .then(function (response) {
+        // handle success
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .finally(function () {
+        // always executed
+    });
 
 
 
